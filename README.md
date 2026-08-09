@@ -3,4 +3,4 @@ Scripts to pull FASTA sequences from BAM files and clean indels/truncated allele
 
 This is a series of scripts used in [ref] to extract genes from genomic datasets using BAM file inputs.
 
-
+Code is provided as is, but is open for use 
