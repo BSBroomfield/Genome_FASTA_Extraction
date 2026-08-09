@@ -9,20 +9,21 @@ samtoolsConsesnus_parallel.slurm
 This script does the initial sequenece extractions from the genome
 
 Requirements:
+
   **Input data**
-   
+  
    Binary alignment map (BAM) files
    General Feature Format (GFF) file for the refernce genome used in BAM file
     
   **Software:**
   
-    Samtools v1.21 or later (https://github.com/samtools/samtools)
-    seqtk1.0 or later (https://github.com/lh3/seqtk)
+   Samtools v1.21 or later (https://github.com/samtools/samtools)
+   seqtk1.0 or later (https://github.com/lh3/seqtk)
 
   **Supplementart Files** - see example files
   
-    SampleList.txt = File containing Sample ID prefix for each BAM file to be analysed, one sample ID per line
-    GeneList.txt =Two column file containing GFF Gene ID in column 1 (case sensitive) and a gene name in column 2 (can be custom names)
+   SampleList.txt = File containing Sample ID prefix for each BAM file to be analysed, one sample ID per line
+   GeneList.txt =Two column file containing GFF Gene ID in column 1 (case sensitive) and a gene name in column 2 (can be custom names)
 
   **Parameter settings**
   
