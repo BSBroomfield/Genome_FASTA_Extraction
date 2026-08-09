@@ -24,6 +24,7 @@ MINDP=6		#Minimum mean depth of a gene to include a sample and minimum site dept
 MINMQ=30	#Minimum mapping quality to include sites in consensus
 MINBQ=20	#Minimum base quality to include sites in consensus
 N_LIM=0.001	#Maximum proportion of N-bases allowed in final sequence (e.g., 0.05 = final sequnce has <=5% N bases)
+INDELS=yes	#Option to toggle indels on or off. 'yes' includes indels in final sequence 'no' ignores indels
 
 n=$SLURM_ARRAY_TASK_ID
 
@@ -97,7 +98,7 @@ REGION=`awk "NR==$e" CodingRegions/${GENE_NAME}/${TRANSCRIPT}_CDS.txt`
 
 samtools consensus -r $REGION -f FASTA -o ${GENE_NAME}/${TRANSCRIPT}/${SAMPLE}_${GENE_NAME}_${TRANSCRIPT}_Exon${e}.fasta \
 --min-MQ $MINMQ --min-BQ $MINBQ \
---show-del yes --show-ins yes \
+--show-del $INDELS --show-ins $INDELS \
 -A -d $MINDP \
 ${BAMPATH}/${SAMPLE}*.bam
 
