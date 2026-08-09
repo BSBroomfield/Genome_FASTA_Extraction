@@ -47,12 +47,13 @@ Requirements:
 
  **Output files**
  
-A directory is created for each gene in GeneList.txt in a new directory 'CodingRegions'
+In a new directory 'CodingRegions', a directory is created for each gene in GeneList.txt which contains the coding regions (CDS) extracted from the GFF file *_CDS.txt
 
-Within each gene directory, a directory is made for each transcript (if a gene has multiple transcript annotations)
+A directory is also created for each gene, which contains a directory is for each gene transcript (if a gene has multiple transcript annotations)
 
-Each transcript has 4 output files:
+Each transcript directory has 4 output files:
 
 1) *_Coverage.txt - gives Mean_Cov Mean_DP Mean_BQ Mean_MQ for each Sample_ID listed in SampleList.txt
-3) *.fasta  - FASTA output for samples passing parameter thresholds
-4) *_SampleList.txt
+2) *.fasta  - FASTA output for samples passing parameter thresholds with IUPAC codes for heterozygotes / * for Indels (unphased)
+3) *_SampleList.txt - gives the input IDs analysed for each gene
+4) Final*SampleIDs.txt - Outputs IDs of samples passing parameter thresholds and contained within *.fasta
