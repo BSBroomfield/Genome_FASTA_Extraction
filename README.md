@@ -5,7 +5,8 @@ All scripts were written in bash for a SLURM HPC cluster
 
 Code is provided as is, but is open source for use and manipulation 
 
-samtoolsConsesnus_parallel.slurm
+**samtoolsConsesnus_parallel.slurm**
+
 This script does the initial sequenece extractions from the genome
 
 Requirements:
@@ -15,6 +16,7 @@ Requirements:
    Binary alignment map (BAM) files
    
    General Feature Format (GFF) file for the refernce genome used in BAM file
+
     
   **Software:**
   
@@ -22,11 +24,13 @@ Requirements:
    
    seqtk1.0 or later (https://github.com/lh3/seqtk)
 
+
   **Supplementary files** - see example files
   
    SampleList.txt = File containing Sample ID prefix for each BAM file to be analysed, one sample ID per line
    
    GeneList.txt =Two column file containing GFF Gene ID in column 1 (case sensitive) and a gene name in column 2 (can be custom names)
+
 
   **Parameter settings**
   
@@ -39,6 +43,7 @@ Requirements:
   MINBQ=[int]  	#Minimum base quality to include sites in consensus e.g., 20 = BQ>=20
   
   N_LIM=[float]	#Maximum proportion of N-bases allowed in final sequence e.g., 0.05 = final sequnce has <=5% N bases
+
 
  **Output files**
  
