@@ -11,7 +11,7 @@ This script does the initial sequenece extractions from the genome
 
 Requirements:
 
-  **Input data**
+  **Input data:**
   
    Binary alignment map (BAM) files
    
@@ -25,7 +25,7 @@ Requirements:
    seqtk1.0 or later (https://github.com/lh3/seqtk)
 
 
-  **Supplementary files** - see example files
+  **Supplementary files:** - (see example files)
   
    SampleList.txt = File containing Sample ID prefix for each BAM file to be analysed, one sample ID per line
    
