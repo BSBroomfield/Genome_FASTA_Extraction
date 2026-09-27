@@ -15,8 +15,8 @@ module load apps/seqtk/1.0/gcc-4.8.5
 #"GeneList.txt" : Two column file containing GFF Gene ID in column 1 (case sensitive) and a gene name in column 2 (can be custom names)
 
 ##SET PATHWAYS
-GFF=~/scratch/WholeGenome_data/Ref_Genome/VectorBase-68_AaegyptiLVP_AGWG.gff #Path to GFF
-BAMPATH=~/scratch/WholeGenome_data/Indel_Realigned_Bam #Path to BAM directory (Note: Omit final '/')
+GFF=~/path/to/GFF.gff #Path to GFF
+BAMPATH=~/path/to/bam_directory #Path to directory containing BAM files (Note: Omit final '/')
 
 ##SET PARAMETERS
 MINCOV=98	#Minimum mean coverage of a gene to include a sample
@@ -26,6 +26,7 @@ MINBQ=20	#Minimum base quality to include sites in consensus
 N_LIM=0.001	#Maximum proportion of N-bases allowed in final sequence (e.g., 0.05 = final sequnce has <=5% N bases)
 INDELS=yes	#Option to toggle indels on or off. 'yes' includes indels in final sequence 'no' ignores indels
 
+##CODE EXECUTION
 n=$SLURM_ARRAY_TASK_ID
 
 GENE_ID=`awk "NR==$n" GeneList.txt | awk '{print $1}'`
