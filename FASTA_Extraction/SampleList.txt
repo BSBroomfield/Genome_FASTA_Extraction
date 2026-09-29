@@ -1,0 +1,4 @@
+SRR11006485_Kedougou_Senegal
+SRR11006486_Ganda_Kenya
+SRR11006487_Bangkok_Thailand
+SRR11006488_Kedougou_Senegal
